@@ -1,6 +1,6 @@
 export default function Footer() {
-  return (
-    <footer className="bg-white">
-    </footer>
-  );
+    return (
+        <footer className="bg-white">
+        </footer>
+    );
 }
