@@ -73,7 +73,6 @@ type ProfileFormProps = {
 
 function ProfileForm(props: ProfileFormProps): JSX.Element {
     return (
-        <>
-        </>
+        <></>
     );
 }
