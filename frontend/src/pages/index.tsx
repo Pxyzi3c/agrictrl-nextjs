@@ -1,4 +1,4 @@
-import Header from "@components/header";
+import Header from "@/src/components/header";
 import { Identity } from "@dfinity/agent";
 import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 

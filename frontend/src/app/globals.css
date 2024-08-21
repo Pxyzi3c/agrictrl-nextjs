@@ -1,5 +1,8 @@
 @layer tailwind-base, primereact, tailwind-utilities;
 
+/* IMPORTANT: In "styled" mode you must add the PrimeReact Theme here. Do NOT include in "unstyled" mode */
+/* @import 'primereact/resources/themes/lara-light-blue/theme.css' layer(primereact); */
+
 @layer tailwind-base {
     @tailwind base;
 }
@@ -7,4 +10,46 @@
 @layer tailwind-utilities {
     @tailwind components;
     @tailwind utilities;
+}
+
+@layer utilities {
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+
+    .flex-between {
+        @apply flex justify-between items-center;
+    }
+}
+
+@layer primereact {
+    .p-toast .p-toast-message .p-toast-message-content {
+        border-width: 0 !important;
+    }
+}
+
+/* LOADER */
+.sun {
+    width: 80px;
+    height: 80px;
+    background: #1C1F2E;
+    border-radius: 60px;
+    position: absolute;
+}
+
+.sunshine {
+    background: #5EEAD4;
+    animation: sunshines 1s infinite;
+}
+
+@keyframes sunshines {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
 }
