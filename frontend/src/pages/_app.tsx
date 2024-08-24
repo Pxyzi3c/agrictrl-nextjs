@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import "tailwindcss/tailwind.css";
-
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+        
 import { Client, InternetIdentity } from "@bundly/ares-core";
 import { IcpConnectContextProvider } from "@bundly/ares-react";
 
@@ -20,9 +21,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <IcpConnectContextProvider client={client}>
-            <Component 
-                {...pageProps} 
-            />
+            <PrimeReactProvider>
+                <Component 
+                    {...pageProps} 
+                />
+            </PrimeReactProvider>
         </IcpConnectContextProvider>
     );
 }
