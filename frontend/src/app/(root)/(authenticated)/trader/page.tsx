@@ -5,7 +5,7 @@ function TraderHome() {
     return (
         <section>
             Trader Home
-            <Button label="Check"/>
+            <Button className='' label="Check"/>
         </section>
     )
 }

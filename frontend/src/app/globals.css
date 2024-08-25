@@ -3,6 +3,17 @@
 /* IMPORTANT: In "styled" mode you must add the PrimeReact Theme here. Do NOT include in "unstyled" mode */
 /* @import 'primereact/resources/themes/lara-light-blue/theme.css' layer(primereact); */
 
+:root {
+    --primary-1: #00C261;
+    --primary-2: #005155;
+    --black: #444444;
+    --gray-dark: #A5A5A5;
+    --gray-light: #D9D9D9;
+    --gray-lightest: #ECECEC;
+    --white-1: #FFFFFF;
+    --white-2: #F1F5F9;
+}
+
 @layer tailwind-base {
     @tailwind base;
 }
@@ -25,6 +36,11 @@
 @layer primereact {
     .p-toast .p-toast-message .p-toast-message-content {
         border-width: 0 !important;
+    }
+
+    .p-button {
+        /* background: var(--primary-1) !important; */
+        /* border: var(--primary-1) !important; */
     }
 }
 
