@@ -1,2 +1,4 @@
-# AUG 8 2024
-- Configure page title dynamic metadata (i.e. "Trader | Home")
+# AUG 26 2024
+- Authenticated layout
+- Sidebar
+- Navbar
