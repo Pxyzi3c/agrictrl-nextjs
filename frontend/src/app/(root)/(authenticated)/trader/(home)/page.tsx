@@ -10,7 +10,7 @@ function TraderHome() {
     return (
         <section>
             Trader Home
-            <Button className='' label="Check"/>
+            <Button className='bg-green-1' label="Check"/>
         </section>
     )
 }
