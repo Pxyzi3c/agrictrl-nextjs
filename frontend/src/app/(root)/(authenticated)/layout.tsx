@@ -2,8 +2,8 @@
 
 import React from 'react'
 
-import Navbar from '@/src/components/navbar';
-import Sidebar from '@/src/components/sidebar';
+import Navbar from '@/src/components/Navbar';
+import Sidebar from '@/src/components/Sidebar';
 
 const AuthenticatedLayout = ({ children }: { children: React.ReactNode}) => {
     return (

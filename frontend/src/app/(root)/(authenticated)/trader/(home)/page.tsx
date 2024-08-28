@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button } from 'primereact/button';
 import { Metadata } from 'next';
+import PrimaryButton from '@/src/components/Button/Primary';
 
 export const metadata: Metadata = {
     title: 'home',
@@ -10,7 +10,11 @@ function TraderHome() {
     return (
         <section>
             Trader Home
-            <Button className='bg-green-1' label="Check"/>
+            <PrimaryButton
+                label='Primary'
+                icon=''
+                handleClick={() => {}}
+            />
         </section>
     )
 }
