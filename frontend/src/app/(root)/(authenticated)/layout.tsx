@@ -10,7 +10,7 @@ const AuthenticatedLayout = ({ children }: { children: React.ReactNode}) => {
     const userType = 'trader';
 
     return (
-        <main className='relative'>
+        <main className='relative bg-white-2'>
             <Navbar />
 
             <div className='flex'>

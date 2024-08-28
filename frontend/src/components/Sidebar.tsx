@@ -10,6 +10,7 @@ import Link from 'next/link'
 
 import { Button } from 'primereact/button';
 import PrimaryButton from './Button/Primary'
+import TertiaryButton from './Button/Tertiary'
 
 const Sidebar = ({ userType }: { userType: 'farmer' | 'trader' | 'admin' }) => {
     const pathname = usePathname();
@@ -27,7 +28,7 @@ const Sidebar = ({ userType }: { userType: 'farmer' | 'trader' | 'admin' }) => {
     }
 
     return (
-        <section className="sticky left-0 top-0 flex h-screen w-fit flex-col  justify-between  bg-dark-1 p-6 pt-28 text-white max-sm:hidden lg:w-[320px]">
+        <section className="sticky left-0 top-0 flex h-screen w-fit flex-col justify-between bg-dark-1 p-8 pt-28 text-white max-sm:hidden lg:w-[350px]">
             <div className='flex flex- flex-col gap-6'>
                 {getSidebarLinks().map((link) => {
                     const isActive = pathname === link.route || pathname?.startsWith(`${link.route}/`);
@@ -37,12 +38,23 @@ const Sidebar = ({ userType }: { userType: 'farmer' | 'trader' | 'admin' }) => {
                             href={link.route}
                             key={link.label}
                         >
-                            <PrimaryButton
-                                icon={link.icon}
-                                label={link.label}
-                                handleClick={() => {}}
-                                className="w-full flex gap-6 px-6 items-center text-start ring-0"
-                            />
+                            {isActive ? (
+                                <TertiaryButton
+                                    icon={link.icon}
+                                    label={link.label}
+                                    handleClick={() => {}}
+                                    className="w-full"
+                                />
+                            ) : (
+                                <PrimaryButton
+                                    outlined={true}
+                                    className='w-full'
+                                    label={link.label}
+                                    icon={link.icon}
+                                    handleClick={() => {}}
+                                />
+                            )}
+
                         </Link>
                     );
                 })}
