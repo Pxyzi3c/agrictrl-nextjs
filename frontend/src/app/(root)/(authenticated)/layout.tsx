@@ -7,7 +7,7 @@ import Sidebar from '@/src/components/Sidebar';
 
 const AuthenticatedLayout = ({ children }: { children: React.ReactNode}) => {
     // TODO: modify this and should be reflected based on the actual user type of the authenticated user
-    const userType = 'trader';
+    const userType = 'admin';
 
     return (
         <main className='relative bg-white-2'>

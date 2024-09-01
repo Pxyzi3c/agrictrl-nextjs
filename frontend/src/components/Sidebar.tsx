@@ -14,14 +14,14 @@ import TertiaryButton from './Button/Tertiary'
 
 const Sidebar = ({ userType }: { userType: 'farmer' | 'trader' | 'admin' }) => {
     const pathname = usePathname();
-    const { traderSidebarLinks, farmerSidebarLinks } = sidebarLinks();
+    const { adminSidebarLinks, farmerSidebarLinks } = sidebarLinks();
 
     const getSidebarLinks = () => {
         switch (userType) {
             case 'farmer':
                 return farmerSidebarLinks;
-            case 'trader':
-                return traderSidebarLinks;
+            case 'admin':
+                return adminSidebarLinks;
             default:
                 return [];
         }

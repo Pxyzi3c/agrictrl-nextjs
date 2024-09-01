@@ -4,12 +4,12 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: {
-        template: 'Trader | %s',
-        default: 'Trader', // a default is required when creating a template
+        template: 'Admin | %s',
+        default: 'Admin', // a default is required when creating a template
     },
 }
 
-const TraderLayout = ({ children }: { children: React.ReactNode }) => {
+const AdminLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <main>
             {children}
@@ -17,4 +17,4 @@ const TraderLayout = ({ children }: { children: React.ReactNode }) => {
     )
 }
 
-export default TraderLayout
+export default AdminLayout

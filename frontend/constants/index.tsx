@@ -9,30 +9,30 @@ import {
 } from 'lucide-react';
 
 export const sidebarLinks = () => {
-    const traderSidebarLinks = [
+    const adminSidebarLinks = [
         {
             label: 'Home',
-            route: '/trader',
+            route: '/admin',
             icon: <House />,
         },
         {
             label: 'Dashboard',
-            route: '/trader/dashboard',
+            route: '/admin/dashboard',
             icon: <CalendarArrowUp />,
         },
         {
             label: 'Tracking',
-            route: '/trader/tracking',
+            route: '/admin/tracking',
             icon: <CalendarArrowDown />,
         },
         {
             label: 'Inventory',
-            route: '/trader/inventory',
+            route: '/admin/inventory',
             icon: <Video />,
         },
         {
             label: 'Facilities',
-            route: '/trader/facilities',
+            route: '/admin/facilities',
             icon: <Plus />,
         },
     ]
@@ -62,6 +62,6 @@ export const sidebarLinks = () => {
     
     return {
         farmerSidebarLinks,
-        traderSidebarLinks
+        adminSidebarLinks
     }
 }

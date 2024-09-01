@@ -6,10 +6,10 @@ export const metadata: Metadata = {
     title: 'home',
 }
 
-function TraderHome() {
+function AdminHome() {
     return (
         <section>
-            Trader Home
+            Admin Home
             <PrimaryButton
                 label='Primary'
                 icon=''
@@ -19,4 +19,4 @@ function TraderHome() {
     )
 }
 
-export default TraderHome
+export default AdminHome
