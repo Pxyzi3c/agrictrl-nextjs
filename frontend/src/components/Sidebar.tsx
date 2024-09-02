@@ -9,8 +9,10 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 import { Button } from 'primereact/button';
-import PrimaryButton from './Button/Primary'
-import TertiaryButton from './Button/Tertiary'
+import { 
+    PrimaryButton, 
+    TertiaryButton 
+} from './Button/Variant'
 
 const Sidebar = ({ userType }: { userType: 'farmer' | 'trader' | 'admin' }) => {
     const pathname = usePathname();
@@ -31,7 +33,7 @@ const Sidebar = ({ userType }: { userType: 'farmer' | 'trader' | 'admin' }) => {
         <section className="sticky left-0 top-0 flex h-screen w-fit flex-col justify-between bg-dark-1 p-8 pt-28 text-white max-sm:hidden lg:w-[350px]">
             <div className='flex flex- flex-col gap-6'>
                 {getSidebarLinks().map((link) => {
-                    const isActive = pathname === link.route || pathname?.startsWith(`${link.route}/`);
+                    const isActive = pathname === link.route;
 
                     return (
                         <Link 

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Metadata } from 'next';
-import PrimaryButton from '@/src/components/Button/Primary';
+import { PrimaryButton } from '@/src/components/Button/Variant';
 
 export const metadata: Metadata = {
-    title: 'home',
+    title: 'Home',
 }
 
 function AdminHome() {
@@ -13,7 +13,6 @@ function AdminHome() {
             <PrimaryButton
                 label='Primary'
                 icon=''
-                handleClick={() => {}}
             />
         </section>
     )
