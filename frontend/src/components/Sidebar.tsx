@@ -13,6 +13,7 @@ import {
     PrimaryButton, 
     TertiaryButton 
 } from './Button/Variant'
+import { LogOut } from 'lucide-react';
 
 const Sidebar = ({ userType }: { userType: 'farmer' | 'trader' | 'admin' }) => {
     const pathname = usePathname();
@@ -30,7 +31,7 @@ const Sidebar = ({ userType }: { userType: 'farmer' | 'trader' | 'admin' }) => {
     }
 
     return (
-        <section className="sticky left-0 top-0 flex h-screen w-fit flex-col justify-between bg-dark-1 p-8 pt-28 text-white max-sm:hidden lg:w-[350px]">
+        <section className="sticky left-0 top-0 flex h-screen w-fit flex-col justify-between bg-dark-1 p-8 pt-28 pb-8 text-white max-sm:hidden lg:w-[350px]">
             <div className='flex flex- flex-col gap-6'>
                 {getSidebarLinks().map((link) => {
                     const isActive = pathname === link.route;
@@ -61,6 +62,13 @@ const Sidebar = ({ userType }: { userType: 'farmer' | 'trader' | 'admin' }) => {
                     );
                 })}
             </div>
+            <PrimaryButton
+                outlined={true}
+                className='w-full'
+                label="Logout"
+                icon={<LogOut />}
+                handleClick={() => {}}
+            />
         </section>
     )
 }
